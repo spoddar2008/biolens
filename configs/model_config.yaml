@@ -1,0 +1,26 @@
+# BioLens Model Configuration
+
+model:
+  name: "microsoft/biogpt"
+  device: "cpu"  # Use "cpu" if no GPU available
+  dtype: "float32"
+  cache_dir: "./cache"
+  use_transformer_lens: false
+
+extraction:
+  pooling: "mean"  # Options: mean, last, token
+  batch_size: 8
+  cache_activations: true
+  cache_dir: "./data/cached_activations"
+
+layers:
+  # Leave null to use all layers, or specify a list
+  layers_to_extract: null  # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+  n_layers: 24  # BioGPT has 24 layers
+  d_model: 768  # Hidden dimension
+
+prompts:
+  drug_target_pairs: "data/prompts/drug_target_pairs.jsonl"
+  metabolic_pathways: "data/prompts/metabolic_pathways.jsonl"
+  safety_benign: "data/prompts/safety_benign.jsonl"
+  safety_sensitive: "data/prompts/safety_sensitive.jsonl"

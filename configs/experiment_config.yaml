@@ -1,0 +1,65 @@
+# BioLens Experiment Configuration
+
+experiments:
+  # Phase 1: Representation Mapping
+  phase_1:
+    name: "Representation Mapping"
+    description: "Train linear probes across layers to find where biological concepts emerge"
+    
+    probes:
+      - concept: "drug_mechanism"
+        description: "Types of drug mechanisms (kinase inhibitor, antimetabolite, etc)"
+        n_folds: 5
+        C: 1.0
+      
+      - concept: "target_family"
+        description: "Protein families that are drug targets"
+        n_folds: 5
+        C: 1.0
+      
+      - concept: "toxicity_class"
+        description: "Toxicity classification (hepatotoxic, cardiotoxic, etc)"
+        n_folds: 5
+        C: 1.0
+      
+      - concept: "pathway"
+        description: "Metabolic or signaling pathway"
+        n_folds: 5
+        C: 1.0
+
+  # Phase 2: Causal Analysis
+  phase_2:
+    name: "Activation Patching"
+    description: "Use causal tracing to identify which layers compute biological predictions"
+    
+    patching:
+      method: "residual"  # Options: residual, attention, mlp, both
+      positions: null      # null = all positions
+      n_experiments: 10    # Number of prompt pairs to test
+
+  # Phase 3: Safety Directions
+  phase_3:
+    name: "Safety Directions"
+    description: "Find directions separating benign from sensitive biological content"
+    
+    safety:
+      method: "logistic"  # Options: mean_diff, logistic
+      n_folds: 5
+      benign_label: 0
+      sensitive_label: 1
+      analyze_correlations: true
+
+# Output configuration
+output:
+  results_dir: "./results"
+  figures_dir: "./results/figures"
+  data_dir: "./data/processed"
+  save_activations: true
+  save_probes: true
+  save_directions: true
+  save_figures: true
+
+# Logging
+logging:
+  level: "INFO"
+  log_file: "./biolens.log"

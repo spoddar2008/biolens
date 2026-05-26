@@ -1,0 +1,78 @@
+{
+  "texts": [
+    "Imatinib selectively inhibits BCR-ABL tyrosine kinase in chronic myeloid leukemia",
+    "Gemcitabine is a nucleoside analog that inhibits DNA synthesis during S phase",
+    "Axicabtagene ciloleucel is a CD19-directed CAR T-cell therapy for large B-cell lymphoma",
+    "Pembrolizumab blocks PD-1 receptor to restore anti-tumor T-cell function",
+    "Olaparib traps PARP1 on damaged DNA, causing synthetic lethality in BRCA-mutant cancers",
+    "5-fluorouracil inhibits thymidylate synthase and disrupts RNA processing in colorectal cancer cells",
+    "Venetoclax is a selective BCL-2 inhibitor that triggers apoptosis in CLL cells",
+    "Rituximab targets CD20 on B lymphocytes for antibody-dependent cellular cytotoxicity",
+    "Temozolomide is an alkylating agent that methylates DNA at O6-guanine in glioblastoma",
+    "Sorafenib is a multi-kinase inhibitor targeting VEGFR and RAF in hepatocellular carcinoma"
+  ],
+  "token_level": false,
+  "metadata": {
+    "label_maps": {
+      "mechanism": {
+        "alkylating_agent": 0,
+        "antimetabolite": 1,
+        "apoptosis_inducer": 2,
+        "enzyme_inhibitor": 3,
+        "immunotherapy": 4,
+        "kinase_inhibitor": 5
+      },
+      "target_family": {
+        "bcl2_family": 0,
+        "cell_surface_antigen": 1,
+        "dna_direct": 2,
+        "dna_polymerase": 3,
+        "dna_repair": 4,
+        "immune_checkpoint": 5,
+        "nucleotide_biosynthesis": 6,
+        "tyrosine_kinase": 7
+      },
+      "toxicity_class": {
+        "cardiotoxic": 0,
+        "hepatotoxic": 1,
+        "immune_mediated": 2,
+        "infusion_related": 3,
+        "myelosuppressive": 4,
+        "neurotoxic": 5,
+        "tumor_lysis": 6
+      },
+      "pathway": {
+        "unknown": 0
+      }
+    },
+    "source": "/Users/spoddar/Downloads/Career/Pivot/bio-interp/data/prompts/drug_target_pairs.jsonl"
+  },
+  "n_prompts": 10,
+  "d_model": 1024,
+  "layers": [
+    "layer_0",
+    "layer_1",
+    "layer_2",
+    "layer_3",
+    "layer_4",
+    "layer_5",
+    "layer_6",
+    "layer_7",
+    "layer_8",
+    "layer_9",
+    "layer_10",
+    "layer_11",
+    "layer_12",
+    "layer_13",
+    "layer_14",
+    "layer_15",
+    "layer_16",
+    "layer_17",
+    "layer_18",
+    "layer_19",
+    "layer_20",
+    "layer_21",
+    "layer_22",
+    "layer_23"
+  ]
+}
