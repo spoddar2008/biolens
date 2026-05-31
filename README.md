@@ -1,6 +1,6 @@
 # 🧬 BioLens: Mechanistic Interpretability for Biomedical Language Models
 
-**How do language models represent biological knowledge — and can we detect when that knowledge becomes dangerous?**
+**How do language models represent biological knowledge and can we detect when that knowledge becomes dangerous?**
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://python.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -139,6 +139,7 @@ jupyter notebook notebooks/01_model_exploration.ipynb
 **Soumya Poddar, PhD**
 Principal Scientist, Translational Medicine | Kite Pharma (Gilead)
 MS Computer Science (AI) | Georgia Institute of Technology
+PhD Molecular and Medical Pharmacology | University of California, Los Angeles
 
 Background: 22 peer-reviewed publications in cancer biology, 6 patents, experience with IND-enabling studies and clinical trial biomarker strategy. Currently applying mechanistic interpretability techniques to understand how models represent biological knowledge.
 
